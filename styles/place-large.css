@@ -1,4 +1,4 @@
-@media (min-width:601px) and (max-width: 2560px) {
+@media (min-width:790px) and (max-width: 2560px) {
     * {
         border: none;
         margin: 0;
@@ -35,8 +35,8 @@
     .data,
     .weather {
         position: absolute;
-        width: 200px;
-
+        width: 300px;
+        margin-right: 1rem;
         border-radius: 10px;
         background-color: white;
     }
@@ -49,7 +49,6 @@
         background-color: green;
         margin: 0.5rem;
         margin-left: 0;
-        right: 10px
     }
 
     .weather img {
@@ -69,6 +68,43 @@
         top: 20px;
     }
 
+    .data-list {
+        list-style-type: none;
+        padding: 1rem;
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
 
+    .data-list li {
+        display: flex;
+        align-items: flex-start;
+        line-height: 1.5rem;
+        font-weight: normal;
+    }
 
+    .data-list li span:first-child {
+        font-weight: bold;
+    }
+
+    .data-list li span[data-value]::after {
+        /*display data value content */
+        content: attr(data-value);
+        color: #000;
+        font-weight: normal;
+        white-space: nowrap;
+    }
+
+    .weather::before {
+        content: "☁️";
+    }
+
+    footer {
+        background-color: red;
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 20px;
+    }
 }
