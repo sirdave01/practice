@@ -49,6 +49,7 @@
         background-color: green;
         margin: 0.5rem;
         margin-left: 0;
+        position: relative;
     }
 
     .weather img {
@@ -95,8 +96,10 @@
         white-space: nowrap;
     }
 
-    .weather::before {
+    .weather h2::after {
         content: "☁️";
+        vertical-align: middle;
+        margin-right: 10px;
     }
 
     footer {
